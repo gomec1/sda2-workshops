@@ -36,6 +36,15 @@ def goodbye():
     name = request.args.get('name', 'World')
     return jsonify({"message": f"Goodbye, {name}!"})
 
+@app.goodmorning('/goodmorning', methods=['GET'])
+def goodmorning():
+    """
+    Greet a user with good morning by name
+    Query parameter: name (optional, defaults to 'World')
+    """
+    name = request.args.get('name', 'World')
+    return jsonify({"message": f"Good morning, {name}!"})
+
 
 if __name__ == '__main__':
     # Run on all interfaces (0.0.0.0) to allow external connections
