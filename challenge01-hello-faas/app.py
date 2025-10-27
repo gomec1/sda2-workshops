@@ -13,7 +13,7 @@ def home():
     return jsonify({
         "service": "SDA2 Challenge 1",
         "status": "running",
-        "endpoints": ["/hello", "/goodbye"]
+        "endpoints": ["/hello", "/goodbye", "/goodmorning"]
     })
 
 @app.route('/hello', methods=['GET'])
