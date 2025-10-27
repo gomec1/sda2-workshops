@@ -36,7 +36,7 @@ def goodbye():
     name = request.args.get('name', 'World')
     return jsonify({"message": f"Goodbye, {name}!"})
 
-@app.goodmorning('/goodmorning', methods=['GET'])
+@app.route('/goodmorning', methods=['GET'])
 def goodmorning():
     """
     Greet a user with good morning by name
